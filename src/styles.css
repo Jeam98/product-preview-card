@@ -1,0 +1,191 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap");
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+:root {
+  --Darkcyan: hsl(158, 36%, 37%);
+  --Cream: hsl(30, 38%, 92%);
+  --Verydarkblue: hsl(212, 21%, 14%);
+  --Darkgrayishblue: hsl(228, 12%, 48%);
+  --White: hsl(0, 0%, 100%);
+}
+body {
+  background-color: var(--Cream);
+  display: grid;
+  place-items: center;
+  user-select: none;
+}
+.card {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+}
+.container {
+  display: grid;
+  gap: 1em;
+  margin: 1.5em;
+  background-color: var(--White);
+  border-radius: 1em;
+  overflow: hidden;
+}
+section {
+  display: grid;
+  gap: 1em;
+  padding: 2em;
+}
+.mobile {
+  width: 100%;
+}
+.desktop {
+  width: 100%;
+  display: none;
+}
+h1 {
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-weight: 500;
+  color: var(--Darkgrayishblue);
+}
+h2 {
+  font-family: "Fraunces", serif;
+  font-size: 40px;
+  color: var(--Verydarkblue);
+}
+p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  color: var(--Darkgrayishblue);
+}
+span {
+  font-family: "Fraunces", serif;
+  color: var(--Darkcyan);
+  font-size: 40px;
+  margin-right: 1rem;
+}
+sup {
+  text-decoration: line-through;
+  font-size: inherit;
+}
+button {
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 15px;
+  color: var(--White);
+  background-color: var(--Darkcyan);
+  border: none;
+  padding: 1em;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s transform;
+}
+button:active {
+  transform: scale(105%);
+}
+@media (min-width: 820px) {
+  .container {
+    grid-template-columns: 1fr 1fr;
+    max-width: 800px;
+    max-height: 576px;
+  }
+  section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2em;
+    gap: 2em;
+  }
+  .mobile {
+    display: none;
+  }
+  .desktop {
+    display: block;
+  }
+}
